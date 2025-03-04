@@ -1,0 +1,19 @@
+.cls{
+    margin:20px 0 ; 
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.title{
+    text-align: center;
+}
+
+.card:hover{
+    box-shadow: 1px 1px 10px black;
+}
+
+span{
+    color: green;
+}
