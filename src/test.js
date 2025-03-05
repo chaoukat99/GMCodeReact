@@ -8,3 +8,6 @@ let elem=document.querySelector("button");
 
 
 // HOF map filter find forEach finIndex
+
+
+

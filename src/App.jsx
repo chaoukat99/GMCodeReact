@@ -1,12 +1,18 @@
 import React, { use } from 'react'
 import Nav from './Nav'
 import Card from './Card'
-
 import "./css/style.css"
 
 import "./css/master.css"
 
 import Swal from 'sweetalert2'
+ 
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/js/bootstrap.min.js"
+import Modal from './Modal'
+import Pagination from './Pagination'
+import ProductList from './ProductList'
+
 /*
 
 JSX rules : 
@@ -25,12 +31,26 @@ JSX rules :
 -{} pour integre un contenu dynamique 
 */  
 
+
+// Navbar
+// ProductsList
+// listes des cartes de produits 
+// App
+//   -Navbar
+//   -ProductcList
+   
+
+
+
+
+
+
 function App() {
 
 
-    let users=["Karim","Samir"] ;
+    let users=["Karim","Samir","Hatim"] ;
 
-
+    // let is_connected=true;
 
     let User="Samir";
    
@@ -56,8 +76,19 @@ function App() {
     // let couleur="pink";
   return (
      <> 
-         
-         {users.map((el)=>{
+    
+    <Nav/>
+
+    <h1 className='text-center'>Nos produits </h1>
+
+     <div className="d-flex justify-content-center gap-5 flex-wrap">
+      <ProductList/>
+     </div>
+    
+    
+ 
+
+         {/* {users.map((el)=>{
 
       return (   <div>
           <h1>{el}</h1>
@@ -65,13 +96,12 @@ function App() {
           </div>)
          }
           )
-         }
+         } */}
        
          {/* <h1 style={{color:"red",backgroundColor:"black"}}>Hello world</h1> */}
+       
+
          
-
-
-
 
          {/* <img src="/images/my_image.jpg" alt="" /> */}
          {/* <Nav/> */}
@@ -108,10 +138,9 @@ function App() {
         console.log("Hello world")
        }} /> */}
 
-
+</>
 
        
-    </>
    
     
   )
