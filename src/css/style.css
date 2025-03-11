@@ -10,10 +10,20 @@
     text-align: center;
 }
 
-.card:hover{
+/* .card:hover{
     box-shadow: 1px 1px 10px black;
-}
+} */
 
 span{
     color: green;
+}
+
+
+.card{
+    width: 400px;
+}
+
+
+label span{
+    color: red;
 }

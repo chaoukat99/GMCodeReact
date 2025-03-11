@@ -1,4 +1,4 @@
-import React, { use } from 'react'
+import React, {useState } from 'react'
 import Nav from './Nav'
 import Card from './Card'
 import "./css/style.css"
@@ -12,6 +12,9 @@ import "bootstrap/dist/js/bootstrap.min.js"
 import Modal from './Modal'
 import Pagination from './Pagination'
 import ProductList from './ProductList'
+import Child from './Child'
+import Parent from './Parent'
+import Form from './Form'
 
 /*
 
@@ -47,28 +50,40 @@ JSX rules :
 
 function App() {
 
+  // let [name,setName]=useState("Karim")
 
-    let users=["Karim","Samir","Hatim"] ;
+  let [light ,setLight]=useState(true);
 
-    // let is_connected=true;
+  let [show,setShow]=useState(false);
 
-    let User="Samir";
+
+  let [icon,setIcon]=useState("fa-solid fa-eye");
+
+
+  let [password,setPassword]=useState("");
+
+
+    // let users=["Karim","Samir","Hatim"] ;
+
+    // // let is_connected=true;
+
+    // let User="Samir";
    
-     let age=20;
+    //  let age=20;
 
-     let imgSrc="https://a.travel-assets.com/findyours-php/viewfinder/images/res40/469000/469963-Hassan-Ii-Mosque.jpg"
+    //  let imgSrc="https://a.travel-assets.com/findyours-php/viewfinder/images/res40/469000/469963-Hassan-Ii-Mosque.jpg"
 
 
-     function AfficherAlert(){
+    //  function AfficherAlert(){
 
-      Swal.fire({
-        title: "Good Job?",
-        text: "This is Test Code",
-        icon: "success",
-        timer:2000
-      });
+    //   Swal.fire({
+    //     title: "Good Job?",
+    //     text: "This is Test Code",
+    //     icon: "success",
+    //     timer:2000
+    //   });
 
-     }
+    //  }
 
 
     
@@ -77,14 +92,13 @@ function App() {
   return (
      <> 
     
-    <Nav/>
+    {/* <Nav/>
 
     <h1 className='text-center'>Nos produits </h1>
 
      <div className="d-flex justify-content-center gap-5 flex-wrap">
       <ProductList/>
-     </div>
-    
+     </div> */}
     
  
 
@@ -138,6 +152,70 @@ function App() {
         console.log("Hello world")
        }} /> */}
 
+
+       {/* <Parent/> */}
+       {/* <h1>Bonsoir  {name} </h1>
+       <button
+       onClick={()=>{
+          setName("Imane");
+       }}
+       
+       >Change Name</button> */}
+
+
+       {/* <input type={`${show?"text":"password"}`  }  
+       
+       onChange={(ev)=>{
+        setPassword(ev.target.value);
+       }}
+
+       name="" id="" />
+       <button 
+      onClick={()=>{
+        setShow(!show);
+        if(!show){
+          setIcon("fa-solid fa-eye-slash")
+       
+        }else{
+          setIcon("fa-solid fa-eye")
+         
+
+
+        }
+        
+      }}
+       >
+       <i className={icon}></i>
+       </button>
+
+       
+       <h1    className={`${light?"bg-white text-dark":"bg-dark text-white"}`}>
+        this is App component
+       </h1>
+
+       <button 
+       onClick={()=>{
+        setLight(!light); 
+        
+        
+       }}
+       >
+        Change Mode
+       </button>
+
+       <button  
+       
+       onClick={()=>{
+        alert("Le password est : "+password)
+       }}
+       >
+        Afficher La valeur
+       </button> */}
+
+
+       <Form/>
+       
+      
 </>
 
        
