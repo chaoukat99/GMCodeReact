@@ -15,6 +15,9 @@ import ProductList from './ProductList'
 import Child from './Child'
 import Parent from './Parent'
 import Form from './Form'
+import Login from './Login'
+import LifeCycle from './LifeCycle'
+import Loading from './Loading'
 
 /*
 
@@ -213,7 +216,9 @@ function App() {
        </button> */}
 
 
-       <Form/>
+       <LifeCycle/>
+      
+       {/* <Login/> */}
        
       
 </>
