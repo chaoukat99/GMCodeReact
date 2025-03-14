@@ -18,7 +18,13 @@ let [count ,setCount]=useState(0)
     .then(res=>res.json())
     .then(datacollected=>setData(datacollected))
 
-   
+    
+
+    // Unmounting 
+
+    return ()=>{
+        // code a executer en destruction
+    }
    },[])
 
 

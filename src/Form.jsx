@@ -26,7 +26,7 @@ function Form() {
     <div className="col-8 d-flex justify-content-center">
     <div className="card">
        <div className="card-header">
-                    <h4 className='text-success text-center'>Contact Form    {UserFromLS.password}</h4>
+                    <h4 className='text-success text-center'>Contact Form    </h4>
            </div>
         <div className="card-body">
               <label htmlFor="" className='label-control'>Nom d'utilisateur <span>*</span></label>

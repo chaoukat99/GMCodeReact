@@ -19,6 +19,11 @@ import Login from './Login'
 import LifeCycle from './LifeCycle'
 import Loading from './Loading'
 
+import Mui from './Mui'
+
+import ProfilComp from './Profil'
+
+import MyContext from './MyContext'
 /*
 
 JSX rules : 
@@ -52,6 +57,15 @@ JSX rules :
 
 
 function App() {
+
+
+  let sharedData={
+    id:1339738,
+    name:"Hajar",
+    email:"Hajar@gmail.com",
+    password:"hajar123",
+    is_connected:false
+  }
 
   // let [name,setName]=useState("Karim")
 
@@ -216,10 +230,20 @@ function App() {
        </button> */}
 
 
-       <LifeCycle/>
+       {/* <LifeCycle/> */}
       
        {/* <Login/> */}
+
+       {/* <Mui/> */}
+
        
+       {/* <Form/> */}
+
+       <MyContext.Provider value={sharedData}>
+
+           <Login/>
+
+       </MyContext.Provider>
       
 </>
 

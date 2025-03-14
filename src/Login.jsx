@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
+ import React, { useState,useContext } from 'react';
+ import MyContext from './MyContext';
 
 function Login() {
       let [email,setEmail]=useState("");
       let [pass ,setPass]=useState("");
 
+      let dataSharedByApp=useContext(MyContext);
+
 
   return (
     <div>
-
+       <h1>Hello User </h1>
+       <h2>Login</h2>
         <input type="email" name="" placeholder='UserName' id=""
         
         onChange={(ev)=>setEmail(ev.target.value)}
@@ -19,13 +23,7 @@ function Login() {
         <button
         
         onClick={()=>{
-            let obj ={
-                userEmail : email,
-                password:pass
-            }
-
-            localStorage.setItem("NewUser",JSON.stringify(obj));
-            alert("User enregisté");
+           console.log(dataSharedByApp)
         }}
         >Se connecter </button>
 
